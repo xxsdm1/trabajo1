@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('#slider1').tinycarousel();
+	});
+</script>
+
+<div id="slider1" class="panel panel-default">
+	<h4 class="panel-heading">Recomendaciones <small>Tenemos algunos libros para ti</small></h4>
+	<a class="buttons prev" href="#">&#60;</a>
+	<div class="viewport">
+		<ul class="overview">
+			<li ng-repeat="libro in libros"><img src="content/imagenes/libros/portada/{{libro.ruta_portada}}.jpg" /></li>
+		</ul>
+	</div>
+	<a class="buttons next" href="#">&#62;</a>
+</div>

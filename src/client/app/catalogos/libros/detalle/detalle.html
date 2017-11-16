@@ -1,0 +1,42 @@
+<div class="panel container-fluid detalle">
+	<div class="col-sm-8 detalle_info">
+		<h1>{{vm.libro[0].titulo}}</h1>
+		<div >
+			<p>{{vm.libro[0].descripcion}}</p>
+		</div>
+		<div style="height: 400px; width: 2px; background-color: rgb(245, 245, 245);"></div>
+	</div>
+	<div class="col-sm-4 ">
+		<div class="col-sm-12 detalle_img">
+			<img src="content/imagenes/libros/portada/{{vm.libro[0].ruta_portada}}.jpg">
+		</div>
+		<div class="col-sm-12 detalle_reserva">
+			<div class="col-sm-12">
+				<label>AUTORES :</label><span>{{vm.libro[0].nombre}}</span>
+			</div>
+			<div class="col-sm-12">
+				<label>AÑO :</label><span>1988</span>
+			</div>
+			<div class="col-sm-12">
+				<a data-toggle="modal" data-target="#myModal">Reservar</a>
+			</div>
+		</div>
+	</div>	
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">BIBLIOTECA UNAMAD</h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" ng-click="vm.reservar()" class="btn btn-primary">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
